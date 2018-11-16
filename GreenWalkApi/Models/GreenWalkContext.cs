@@ -5,10 +5,10 @@ namespace GreenWalkApi.Models
 {
     public class GreenWalkContext : DbContext, IGreenWalkContext
     {
-        public GreenWalkContext() : base()
-        {
+        public GreenWalkContext(DbContextOptions<GreenWalkContext> options)
+            : base(options)
+        { }
 
-        }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Journey> Journeys { get; set; }
