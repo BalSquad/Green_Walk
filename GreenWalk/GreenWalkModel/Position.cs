@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GreenWalk.Models
+namespace GreenWalkModel
 {
     public class Position
     {

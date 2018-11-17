@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using GreenWalkApi.Interface;
 using GreenWalkApi.Models;
 using GreenWalkApi.Services;
+using GreenWalkModel;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860

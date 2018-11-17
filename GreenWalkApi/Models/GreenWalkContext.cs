@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GreenWalkModel;
+using Microsoft.EntityFrameworkCore;
 
 namespace GreenWalkApi.Models
 {

@@ -1,11 +1,6 @@
-﻿using GreenWalk.Models;
-using GreenWalk.Services;
-using System;
+﻿using GreenWalk.Services;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
