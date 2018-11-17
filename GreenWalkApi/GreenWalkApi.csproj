@@ -19,4 +19,8 @@
     <Compile Remove="Models\EmptyClass.cs" />
     <Compile Remove="Models\IGreenWalkContext.cs" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GreenWalk\GreenWalkModel\GreenWalkModel.csproj" />
+  </ItemGroup>
 </Project>

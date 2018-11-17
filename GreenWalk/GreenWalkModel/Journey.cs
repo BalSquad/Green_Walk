@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GreenWalkApi.Models
+namespace GreenWalkModel
 {
     public class Journey
     {
