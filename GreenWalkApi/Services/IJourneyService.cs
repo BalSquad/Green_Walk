@@ -7,6 +7,7 @@ namespace GreenWalkApi.Services
     {
         Journey Get(int id);
         List<Journey> GetAll();
+        List<Journey> GetAllByUser(int id);
         void Update(Journey journey);
         void Delete(Journey journey);
         void Create(Journey journey);

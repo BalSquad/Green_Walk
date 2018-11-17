@@ -3,12 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:GreenWalk"
              x:Class="GreenWalk.MainPage">
-
+    <ContentPage.BackgroundColor>White</ContentPage.BackgroundColor>
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="LimeGreen" VerticalOptions="CenterAndExpand" Padding="10" HorizontalOptions="FillAndExpand">
+            <Label x:Name="splashLabel" HorizontalTextAlignment="Center" FontSize="Large" TextColor="White" FontAttributes="Bold" FontFamily="Open Sans">Prêts à nettoyer la planète ?</Label>
+            <Button x:Name="splashButton" Text="Démarrer un trajet !" Clicked="SplashButton_Clicked" BackgroundColor="MediumSeaGreen" FontSize="Large" TextColor="White" FontAttributes="Bold" FontFamily="Open Sans"/>
+            <Button x:Name="historiqueJourneyButton" Text="Historique des trajets !" Clicked="HistoriqueJourney_Clicked" BackgroundColor="MediumSeaGreen" FontSize="Large" TextColor="White" FontAttributes="Bold" FontFamily="Open Sans"/>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>

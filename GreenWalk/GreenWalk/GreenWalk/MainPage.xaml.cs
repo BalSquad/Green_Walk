@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GreenWalk.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,17 @@ namespace GreenWalk
         public MainPage()
         {
             InitializeComponent();
+            
+        }
+
+        private async void SplashButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Run());
+        }
+
+        private async void HistoriqueJourney_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Journeys());
         }
     }
 }

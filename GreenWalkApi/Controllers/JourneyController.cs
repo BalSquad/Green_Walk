@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GreenWalkApi.Controllers
 {
-    [Route("api/controller")]
+    [Route("api/[controller]")]
     [ApiController]
     public class JourneyController : ControllerBase, ICRUD<Journey>
     {
@@ -34,6 +34,12 @@ namespace GreenWalkApi.Controllers
         public ActionResult<Journey> Get(int id)
         {
             return _journeyService.Get(id);
+        }
+
+        [HttpGet("GetAllByUser/{id}")]
+        public ActionResult<List<Journey>> GetAllByUser(int id)
+        {
+            return _journeyService.GetAllByUser(id);
         }
 
         [HttpGet]
