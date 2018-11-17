@@ -1,5 +1,5 @@
 using GreenWalkApi.Models;
-using Microsoft.EntityFrameworkCore;
+using GreenWalkModel;
 using System.Collections.Generic;
 using System.Linq;
 
