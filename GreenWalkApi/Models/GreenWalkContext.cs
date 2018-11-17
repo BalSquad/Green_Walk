@@ -1,14 +1,12 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace GreenWalkApi.Models
 {
-    public class GreenWalkContext : DbContext, IGreenWalkContext
+    public class GreenWalkContext : DbContext
     {
-        public GreenWalkContext() : base()
-        {
-
-        }
+        public GreenWalkContext(DbContextOptions<GreenWalkContext> options)
+            : base(options)
+        { }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Journey> Journeys { get; set; }
@@ -16,6 +14,6 @@ namespace GreenWalkApi.Models
         public DbSet<Bin> Bins { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<Success> Successes { get; set; }
-    
+
     }
 }

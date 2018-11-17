@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using GreenWalkApi.Interface;
 using GreenWalkApi.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GreenWalkApi.Controllers 
 {
@@ -20,12 +21,12 @@ namespace GreenWalkApi.Controllers
                         _journeyService.Delete(id);
                 }
 
-                public int Get(int id)
+                public ActionResult<int> Get(int id)
                 {
                         throw new System.NotImplementedException();
                 }
 
-                public List<int> GetAll()
+                public ActionResult<List<int>> GetAll()
                 {
                         throw new System.NotImplementedException();
                 }
