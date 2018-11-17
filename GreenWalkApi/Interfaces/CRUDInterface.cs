@@ -4,21 +4,21 @@ using Microsoft.AspNetCore.Mvc;
 namespace GreenWalkApi.Interface
 {
 
-        public interface ICRUDInterface<T>
-        {
-            
-                [HttpGet]
-                T Get(int id);
+    public interface ICRUDInterface<T>
+    {
 
-                [HttpGet]
-                List<T> GetAll();
+        [HttpGet]
+        ActionResult<T> Get(int id);
 
-                [HttpPut]
-                void Update(T item);
+        [HttpGet]
+        ActionResult<List<T>> GetAll();
 
-                [HttpPost]
-                void Delete(int id);
+        [HttpPut]
+        void Update(T item);
 
-        }
+        [HttpPost]
+        void Delete(T id);
+
+    }
 
 }

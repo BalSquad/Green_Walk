@@ -1,19 +1,15 @@
-namespace GreenWalkApi.Services 
+using GreenWalkApi.Models;
+
+namespace GreenWalkApi.Services
 {
 
-    public class ContextService: IContextService 
+    public class ContextService : IContextService
     {
-        private int _context;
+        private readonly GreenWalkContext _context;
 
-        public int Context
-        {
-            get
-            {
-                return _context;
-            }
-        }
+        public GreenWalkContext Context => _context;
 
-        public ContextService(int context)
+        public ContextService(GreenWalkContext context)
         {
             _context = context;
         }
