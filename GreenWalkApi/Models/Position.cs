@@ -9,6 +9,8 @@ namespace GreenWalkApi.Models
         public int X { get; set; }
         public int Y { get; set; }
         public DateTime Date { get; set; }
+
+        public int JourneyID { get; set; }
         public Journey Journey { get; set; }
 
         public ICollection<Bin> Bins { get; set; }
