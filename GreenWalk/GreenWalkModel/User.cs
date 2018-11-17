@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GreenWalkModel
 {
@@ -18,5 +19,14 @@ namespace GreenWalkModel
         public ICollection<Bin> Bins { get; set; }
         public ICollection<Event> Events { get; set; }
         public ICollection<Success> Successes { get; set; }
+
+        [NotMapped]
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
     }
 }
