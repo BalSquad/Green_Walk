@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace GreenWalkApi.Interface
 {
 
-    public interface ICRUDInterface<T>
+    public interface ICRUD<T>
     {
 
         [HttpPost]

@@ -8,7 +8,7 @@ namespace GreenWalkApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase, ICRUDInterface<User>
+    public class UserController : ControllerBase, ICRUD<User>
     {
 
         private IUserService _userService;
