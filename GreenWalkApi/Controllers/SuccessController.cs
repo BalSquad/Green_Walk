@@ -28,7 +28,7 @@ namespace GreenWalkApi.Controllers
             _successService.Create(success);
         }
 
-        [HttpPost]
+        [HttpDelete]
         public void Delete([FromBody]Success success)
         {
             _successService.Delete(success);

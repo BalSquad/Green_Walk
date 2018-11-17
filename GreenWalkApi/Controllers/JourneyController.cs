@@ -21,10 +21,10 @@ namespace GreenWalkApi.Controllers
         [HttpPost]
         public void Create([FromBody]Journey item)
         {
-            throw new System.NotImplementedException();
+            _journeyService.Create(item);
         }
 
-        [HttpPost]
+        [HttpDelete]
         public void Delete([FromBody]Journey journey)
         {
             _journeyService.Delete(journey);
