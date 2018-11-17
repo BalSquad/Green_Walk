@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using GreenWalkApi.Interface;
 using GreenWalkApi.Services;
-using GreenWalkModels;
+using GreenWalkModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GreenWalkApi.Controllers
