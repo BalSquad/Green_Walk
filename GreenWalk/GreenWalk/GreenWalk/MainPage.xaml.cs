@@ -1,5 +1,4 @@
-﻿using Android.Views.Animations;
-using GreenWalk.Pages;
+﻿using GreenWalk.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
