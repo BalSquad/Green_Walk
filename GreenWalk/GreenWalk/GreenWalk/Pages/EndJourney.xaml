@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GreenWalk.Pages.EndJourney">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="GreenWalk.Pages.EndJourney"
+             BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout Spacing="10" x:Name="layout">
-            <Image Source="../Ressources/Images/Adrien.jpeg" Aspect="Fill" HeightRequest="150" WidthRequest="150" />
-            <StackLayout Grid.Row="1" Orientation="Horizontal">
-                <Label Text="Temps : " />
-                <Label Text="{Binding User.FirstName}" />
+            <Image x:Name="AjouterImage" HeightRequest="150" WidthRequest="150" />
+            <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="{Binding Duree, StringFormat='Temps : {0:mm\\:ss\\:ff}'}"
+                       FontSize="Large"/>
             </StackLayout>
-            <StackLayout Grid.Row="1" Orientation="Horizontal">
-                <Label Text="Distance :" />
-                <Label Text="{Binding User.LastName}" />
+            <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="{Binding Distance, StringFormat='Distance : {0:F2} km'}"
+                       FontSize="Large"/>
             </StackLayout>
-            <Button Text="Enregistrer" />
+            <Button x:Name="EnregistrerButton" 
+                    Text="Enregistrer" 
+                    Clicked="Enregistrer_Button" 
+                    BackgroundColor="MediumSeaGreen" 
+                    FontSize="Large" 
+                    TextColor="White" 
+                    FontAttributes="Bold" 
+                    FontFamily="Open Sans"
+                    VerticalOptions="EndAndExpand"
+                    Padding="15"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

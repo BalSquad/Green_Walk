@@ -15,6 +15,9 @@ namespace GreenWalk.Pages
 		public DetailJourney ()
 		{
 			InitializeComponent ();
+
+            //MyMap.rout
+
 		}
 	}
 }

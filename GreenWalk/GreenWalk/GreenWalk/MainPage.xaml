@@ -4,13 +4,13 @@
              xmlns:local="clr-namespace:GreenWalk"
              x:Class="GreenWalk.MainPage">
     <ContentPage.BackgroundColor>White</ContentPage.BackgroundColor>
-    <StackLayout>
-        <StackLayout BackgroundColor="LimeGreen" VerticalOptions="CenterAndExpand" Padding="10" HorizontalOptions="FillAndExpand">
-            <Label x:Name="splashLabel" HorizontalTextAlignment="Center" FontSize="Large" TextColor="White" FontAttributes="Bold" FontFamily="Open Sans">Prêts à nettoyer la planète ?</Label>
-            <Button x:Name="splashButton" Text="Démarrer un trajet !" Clicked="SplashButton_Clicked" BackgroundColor="MediumSeaGreen" FontSize="Large" TextColor="White" FontAttributes="Bold" FontFamily="Open Sans"/>
-            <Button x:Name="historiqueJourneyButton" Text="Historique des trajets !" Clicked="HistoriqueJourney_Clicked" BackgroundColor="MediumSeaGreen" FontSize="Large" TextColor="White" FontAttributes="Bold" FontFamily="Open Sans"/>
-         <Button x:Name="endJourneyButton" Text="Fin du Trajet !" Clicked="EndJourney_Clicked" BackgroundColor="MediumSeaGreen" FontSize="Large" TextColor="White" FontAttributes="Bold" FontFamily="Open Sans"/>
-       </StackLayout>
+    <StackLayout Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+        <Label Text="GREEN WALK" FontSize="34" Margin="0,0,0,70" HorizontalTextAlignment="Center" TextColor="#489D2C"/>
+        <Image x:Name="Logo" HeightRequest="200" WidthRequest="200" Margin="0,0,0,70"/>
+        <Label x:Name="splashLabel" HorizontalTextAlignment="Center" FontSize="Large" TextColor="White" FontAttributes="Bold" FontFamily="Open Sans">Prêts à nettoyer la planète ?</Label>
+        <Button x:Name="splashButton" Text="Démarrer un trajet !" Clicked="SplashButton_Clicked" BackgroundColor="MediumSeaGreen" FontSize="Large" TextColor="White" FontAttributes="Bold" FontFamily="Open Sans"/>
+        <Button x:Name="historiqueJourneyButton" Text="Mes trajets" Clicked="HistoriqueJourney_Clicked" BackgroundColor="MediumSeaGreen" FontSize="Large" TextColor="White" FontAttributes="Bold" FontFamily="Open Sans"/>
+
     </StackLayout>
 
 </ContentPage>

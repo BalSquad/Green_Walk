@@ -15,6 +15,8 @@ namespace GreenWalk
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+            ((NavigationPage)MainPage).BarBackgroundColor = Color.White;
+            ((NavigationPage)MainPage).BarTextColor = Color.FromHex("#489D2C");
         }
 
         protected override void OnStart()
