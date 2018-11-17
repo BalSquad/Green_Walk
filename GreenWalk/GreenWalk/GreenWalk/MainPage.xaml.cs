@@ -13,7 +13,8 @@ namespace GreenWalk
         public MainPage()
         {
             InitializeComponent();
-            
+
+            Logo.Source = ImageSource.FromFile("logopiaf.png");
         }
 
         private async void SplashButton_Clicked(object sender, EventArgs e)
@@ -24,11 +25,6 @@ namespace GreenWalk
         private async void HistoriqueJourney_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Journeys());
-        }
-
-        private async void EndJourney_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new EndJourney());
         }
     }
 }

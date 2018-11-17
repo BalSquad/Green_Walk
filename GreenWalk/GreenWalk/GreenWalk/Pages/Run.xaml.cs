@@ -23,6 +23,8 @@ namespace GreenWalk.Pages
         {
             Timer.Stop();
             TimerDisplay.Text = String.Format("Temps écoulé : {0}",Timer.TimeSpent);
+
+            Navigation.PushAsync(new EndJourney(2.7, Timer.TimeSpent));
         }
     }
 }

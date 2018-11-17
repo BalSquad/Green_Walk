@@ -25,7 +25,7 @@ namespace GreenWalk.Services
                         journeys = JsonConvert.DeserializeObject<List<Journey>>(json);
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Debug.WriteLine(e.Message);
                     Debug.WriteLine(e.InnerException.Message);
@@ -34,5 +34,37 @@ namespace GreenWalk.Services
             }
         }
 
+        public static void CreateJourney(int userId)
+        {
+
+            using (HttpClient client = new HttpClient())
+            {
+
+                Journey journeys = new Journey
+                {
+                    UserID = userId,
+                    Date = DateTime.Now
+                };
+
+                try
+                {
+                    var dataAsString = JsonConvert.SerializeObject(journeys);
+                    var content = new StringContent(dataAsString);
+                    content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                    var url = "";
+                    var response = client.PostAsync(url, content).Result;
+                    var result = response.IsSuccessStatusCode ? true : false;
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine(e.Message);
+                    Debug.WriteLine(e.InnerException.Message);
+                }
+
+            }
+
+        }
+
+   
     }
 }
