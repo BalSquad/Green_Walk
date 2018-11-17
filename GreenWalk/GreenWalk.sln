@@ -5,15 +5,13 @@ VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenWalk.Android", "GreenWalk\GreenWalk.Android\GreenWalk.Android.csproj", "{E68F4687-E4D3-4422-9794-DCDCEB188C19}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenWalk", "GreenWalk\GreenWalk\GreenWalk.csproj", "{6CE8DD52-2688-43FB-BBDC-40D2432C7B85}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenWalkApi", "..\GreenWalkApi\GreenWalkApi.csproj", "{34AC738D-E0A9-4947-9ED6-12FC776C6CA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenWalkApi", "..\GreenWalkApi\GreenWalkApi.csproj", "{34AC738D-E0A9-4947-9ED6-12FC776C6CA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenWalkModel", "GreenWalkModel\GreenWalkModel.csproj", "{D8722CDE-DFE3-4B74-B9EE-25C134BE9103}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenWalkModel", "GreenWalkModel\GreenWalkModel.csproj", "{D8722CDE-DFE3-4B74-B9EE-25C134BE9103}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "GreenWalk", "GreenWalk\GreenWalk\GreenWalk.csproj", "{BAB9EC6B-1AC9-4965-B745-D29DBF5134E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenWalk", "GreenWalk\GreenWalk\GreenWalk.csproj", "{BAB9EC6B-1AC9-4965-B745-D29DBF5134E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

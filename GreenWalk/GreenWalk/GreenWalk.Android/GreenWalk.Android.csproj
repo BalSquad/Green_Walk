@@ -93,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GreenWalk\GreenWalk.csproj">
-      <Project>{6DFF1831-EB6F-4253-AABC-FB0D8CAA82C3}</Project>
+      <Project>{BAB9EC6B-1AC9-4965-B745-D29DBF5134E7}</Project>
       <Name>GreenWalk</Name>
     </ProjectReference>
   </ItemGroup>
