@@ -11,7 +11,7 @@
                    x:Name="TimerDisplay"
                    HorizontalTextAlignment="Center"
                    VerticalOptions="CenterAndExpand"
-                   FontSize="42">
+                   FontSize="Medium">
             </Label>
             <maps:Map MapType="Street" 
                       VerticalOptions="FillAndExpand"
