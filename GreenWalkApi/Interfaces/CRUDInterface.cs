@@ -7,6 +7,9 @@ namespace GreenWalkApi.Interface
     public interface ICRUDInterface<T>
     {
 
+        [HttpPost]
+        void Create(T item);
+
         [HttpGet]
         ActionResult<T> Get(int id);
 

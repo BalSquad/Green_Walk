@@ -1,40 +1,52 @@
 using System.Collections.Generic;
 using GreenWalkApi.Interface;
+using GreenWalkApi.Models;
 using GreenWalkApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GreenWalkApi.Controllers 
+namespace GreenWalkApi.Controllers
 {
+    [Route("api/controller")]
+    [ApiController]
+    public class JourneyController : ControllerBase, ICRUDInterface<Journey>
+    {
 
-        public class JourneyController : ICRUDInterface<int>
+        private IJourneyService _journeyService;
+
+        public JourneyController(IJourneyService journeyService)
         {
-
-                private IJourneyService _journeyService;
-
-                public JourneyController(IJourneyService journeyService)
-                {
-                        _journeyService = journeyService;
-                }
-
-                public void Delete(int id)
-                {
-                        _journeyService.Delete(id);
-                }
-
-                public ActionResult<int> Get(int id)
-                {
-                        throw new System.NotImplementedException();
-                }
-
-                public ActionResult<List<int>> GetAll()
-                {
-                        throw new System.NotImplementedException();
-                }
-
-                public void Update(int item)
-                {
-                        throw new System.NotImplementedException();
-                }
+            _journeyService = journeyService;
         }
+
+        [HttpPost]
+        public void Create(Journey item)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        [HttpPost]
+        public void Delete(Journey journey)
+        {
+            _journeyService.Delete(journey);
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Journey> Get(int id)
+        {
+            return _journeyService.Get(id);
+        }
+
+        [HttpGet]
+        public ActionResult<List<Journey>> GetAll()
+        {
+            return _journeyService.GetAll();
+        }
+
+        [HttpPut]
+        public void Update(Journey journey)
+        {
+            _journeyService.Update(journey);
+        }
+    }
 
 }

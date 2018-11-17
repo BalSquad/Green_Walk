@@ -24,7 +24,6 @@ namespace GreenWalkApi.Controllers
             return _userService.Get(id);
         }
 
-
         [HttpGet]
         public ActionResult<List<User>> GetAll()
         {
@@ -41,6 +40,12 @@ namespace GreenWalkApi.Controllers
         public void Delete(User user)
         {
             _userService.Delete(user);
+        }
+
+        [HttpPost]
+        public void Create(User item)
+        {
+            throw new System.NotImplementedException();
         }
     }
 
