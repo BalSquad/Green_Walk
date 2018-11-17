@@ -9,7 +9,7 @@ namespace GreenWalkApi.Controllers
 {
     [Route("api/controller")]
     [ApiController]
-    public class BinController: ControllerBase, ICRUD<Bin>
+    public class BinController : ControllerBase, ICRUD<Bin>
     {
         private IBinService _binService;
 
@@ -21,7 +21,7 @@ namespace GreenWalkApi.Controllers
         [HttpPost]
         public void Create([FromBody]Bin bin)
         {
-            throw new System.NotImplementedException();
+            _binService.Create(bin);
         }
 
         [HttpPost]
