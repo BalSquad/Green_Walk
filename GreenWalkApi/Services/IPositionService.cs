@@ -1,10 +1,15 @@
-﻿namespace GreenWalkApi.Services
+﻿using System.Collections.Generic;
+using GreenWalkApi.Models;
+
+namespace GreenWalkApi.Services
 {
     public interface IPositionService
     {
-        int Get(int id);
-        int GetAll();
-        void Update();
-        void Delete(int id);
+        void Delete(Position position);
+        Position Get(int id);
+        List<Position> GetAll();
+        void Update(Position position);
+
+        void Create(Position position);
     }
 }

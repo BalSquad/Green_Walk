@@ -21,7 +21,7 @@ namespace GreenWalkApi.Controllers
         [HttpPost]
         public void Create([FromBody]Journey item)
         {
-            throw new System.NotImplementedException();
+            _journeyService.Create(item);
         }
 
         [HttpDelete]

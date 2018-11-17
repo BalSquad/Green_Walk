@@ -45,7 +45,7 @@ namespace GreenWalkApi.Controllers
         [HttpPost]
         public void Create([FromBody]User item)
         {
-            throw new System.NotImplementedException();
+            _userService.Create(item);
         }
     }
 

@@ -32,7 +32,7 @@ namespace GreenWalkApi.Services
 
         public void Update(User user)
         {
-            var _user = _context.Users.Find(user);
+            var _user = _context.Users.Find(user.UserID);
             _user = user;
             _context.SaveChanges();
         }
