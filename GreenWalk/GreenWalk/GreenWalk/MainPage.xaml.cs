@@ -21,5 +21,10 @@ namespace GreenWalk
         {
             await Navigation.PushAsync(new Run());
         }
+
+        private async void HistoriqueJourney_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Journeys());
+        }
     }
 }
