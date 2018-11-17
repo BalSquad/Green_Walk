@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
 using Xamarin.Forms;
 
 namespace GreenWalk.Models
@@ -10,18 +8,10 @@ namespace GreenWalk.Models
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public TimeSpan Time
-        {
-            get => DateTime.Now - StartTime;
-            set => throw new FieldAccessException();
-        }
+        public TimeSpan Time => DateTime.Now - StartTime;
         public TimeSpan TimeSpent => EndTime - StartTime;
         public DateTime StartTime { get; private set; }
         public DateTime EndTime { get; private set; }
-
-        public Timer()
-        {
-        }
 
         public void Start()
         {
