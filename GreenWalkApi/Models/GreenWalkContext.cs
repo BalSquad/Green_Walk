@@ -7,6 +7,10 @@ namespace GreenWalkApi.Models
         public GreenWalkContext(DbContextOptions<GreenWalkContext> options)
             : base(options)
         { }
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 
         public DbSet<User> Users { get; set; }
         public DbSet<Journey> Journeys { get; set; }
