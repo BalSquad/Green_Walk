@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GreenWalk.Pages.Run">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label TextColor="Black" Text="{Binding Time, StringFormat='{0:mm\\:ss\\:ff}'}" x:Name="TimerDisplay">
+            </Label>
+
+            <Button Text="Fini !" x:Name="Stop" Clicked="Stop_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
