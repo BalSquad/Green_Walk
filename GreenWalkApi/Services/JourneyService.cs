@@ -1,4 +1,5 @@
 using GreenWalkApi.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -33,7 +34,10 @@ namespace GreenWalkApi.Services
 
         public List<Journey> GetAllByUser(int id)
         {
-            return _context.Journeys.Where(journey => journey.User.UserID == id).ToList();
+            return _context.Journeys
+                .Include(journey => journey.User)
+                .Where(journey => journey.User.UserID == id)
+                .ToList();
         }
 
         public void Update(Journey journey)
