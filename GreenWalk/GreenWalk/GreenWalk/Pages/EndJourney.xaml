@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GreenWalk.Pages.EndJourney">
     <ContentPage.Content>
-        <StackLayout>
-            <ImageButton Source="AjouterPhoto.png"/>
-            
+        <StackLayout Spacing="10" x:Name="layout">
+            <Image Source="../Ressources/Images/Adrien.jpeg" Aspect="Fill" HeightRequest="150" WidthRequest="150" />
+            <StackLayout Grid.Row="1" Orientation="Horizontal">
+                <Label Text="Temps : " />
+                <Label Text="{Binding User.FirstName}" />
+            </StackLayout>
+            <StackLayout Grid.Row="1" Orientation="Horizontal">
+                <Label Text="Distance :" />
+                <Label Text="{Binding User.LastName}" />
+            </StackLayout>
+            <Button Text="Enregistrer" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

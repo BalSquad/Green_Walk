@@ -25,5 +25,10 @@ namespace GreenWalk
         {
             await Navigation.PushAsync(new Journeys());
         }
+
+        private async void EndJourney_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EndJourney());
+        }
     }
 }
