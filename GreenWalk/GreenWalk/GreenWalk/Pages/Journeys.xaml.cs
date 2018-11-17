@@ -25,6 +25,16 @@ namespace GreenWalk.Pages
             //UserId
             AllJourneys = new ObservableCollection<Journey>(JourneyService.GetJourneysByUser(1).AsEnumerable());
 
+            foreach(Journey j in AllJourneys)
+            {
+                j.User = new User()
+                {
+                    FirstName = "Lucas",
+                    LastName = "Tambarin",
+                    Pseudo = "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwj93-Ta9dreAhUDNOwKHb_QDmUQjRx6BAgBEAU&url=https%3A%2F%2Fwww.churchtrac.com%2Farticles%2Finsert-logo-here%2F&psig=AOvVaw0Z_hWefV7k5fNPDXSNyOln&ust=1542526218359916"
+                };
+            }
+
             MyListView.ItemsSource = AllJourneys;
         }
 
