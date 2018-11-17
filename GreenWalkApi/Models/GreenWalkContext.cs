@@ -7,10 +7,16 @@ namespace GreenWalkApi.Models
         public GreenWalkContext(DbContextOptions<GreenWalkContext> options)
             : base(options)
         { }
-<<<<<<< HEAD
 
-=======
->>>>>>> master
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Success>()
+                .HasMany(s => s.Users);
+
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Successes);
+            
+        }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Journey> Journeys { get; set; }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace GreenWalkApi.Models
 {
@@ -7,8 +6,9 @@ namespace GreenWalkApi.Models
     {
         public int SuccessID { get; set; }
         public string Name { get; set; }
-        public Byte[] Logo { get; set; }
-        public ICollection<User> User { get; set; }
+        public byte[] Logo { get; set; }
+
+        public ICollection<User> Users { get; set; }
 
     }
 }

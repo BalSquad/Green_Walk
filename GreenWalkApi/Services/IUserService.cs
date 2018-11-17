@@ -9,6 +9,7 @@ namespace GreenWalkApi.Services
         List<User> GetAll();
         void Update(User user);
         void Delete(User user);
+        void Create(User user);
     }
 
 }
