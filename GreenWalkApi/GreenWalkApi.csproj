@@ -15,5 +15,6 @@
 
   <ItemGroup>
     <Compile Remove="Models\EmptyClass.cs" />
+    <Compile Remove="Models\IGreenWalkContext.cs" />
   </ItemGroup>
 </Project>
