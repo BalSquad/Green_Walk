@@ -1,10 +1,14 @@
-﻿namespace GreenWalkApi.Services
+﻿using System.Collections.Generic;
+using GreenWalkApi.Models;
+
+namespace GreenWalkApi.Services
 {
     public interface IEventService
     {
-        int Get(int id);
-        int GetAll();
-        void Update();
-        void Delete(int id);
+        Event Get(int id);
+        List<Event> GetAll();
+        void Update(Event eventt);
+        void Delete(Event eventt);
+        void Create(Event eventt);
     }
 }
