@@ -13,7 +13,7 @@ namespace GreenWalkApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SuccessController : Controller, ICRUD<Success>
+    public class SuccessController : ControllerBase, ICRUD<Success>
     {
         private ISuccessService _successService;
 
