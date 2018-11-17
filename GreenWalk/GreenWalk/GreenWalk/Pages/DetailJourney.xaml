@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="GreenWalk.Pages.DetailJourney">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="0,10,0,0">
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="5,5,5,5">
+                <Label Text="Recolte du 05/10/2018" FontSize="Large"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <custom:CircleImage Grid.Row="3" Source="https://picsum.photos/500" WidthRequest="20" HeightRequest="20"/>
+                    <Label Text="Lucas Tambarin" FontSize="Micro"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

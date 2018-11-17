@@ -21,18 +21,24 @@ namespace GreenWalk.Pages
             //UserId
             AllJourneys = new ObservableCollection<Journey>(JourneyService.GetJourneysByUser(1).AsEnumerable());
 
+            foreach(Journey j in AllJourneys)
+            {
+                j.User = new User()
+                {
+                    FirstName = "Lucas",
+                    LastName = "Tambarin",
+                    Pseudo = "https://picsum.photos/500"
+                };
+            }
+
             MyListView.ItemsSource = AllJourneys;
         }
 
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e.Item == null)
                 return;
-
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
-
-            //Deselect Item
-            ((ListView)sender).SelectedItem = null;
+            Navigation.PushAsync(new DetailJourney());
         }
     }
 }
