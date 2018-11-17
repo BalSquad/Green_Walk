@@ -34,12 +34,9 @@ namespace GreenWalkApi.Services
 
         public List<Journey> GetAllByUser(int id)
         {
-            var res = _context.Journeys
-                .Include(journey => journey.User)
-                .ThenInclude(u => u.Journeys)
-                .Where(journey => journey.User.UserID == id)
+            return _context.Journeys
+                .Where(journey => journey.UserID == id)
                 .ToList();
-            return res;
         }
 
         public void Update(Journey journey)
