@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
+using Microsoft.Extensions.Logging;
 
 namespace GreenWalkApi
 {
@@ -23,6 +23,12 @@ namespace GreenWalkApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddCors(o => o.AddPolicy("All", builder =>
+            {
+                builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+            }));
 
             services.AddDbContext<GreenWalkContext>(options => 
                 options.UseSqlServer("Server=tcp:greenwalkapidbserver.database.windows.net,1433;Initial Catalog=GreenWalk_DB;Persist Security Info=False;User ID=GreenWalk_Admin;Password=ImGonnaCl€an4;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
@@ -47,6 +53,7 @@ namespace GreenWalkApi
             {
                 app.UseHsts();
             }
+            
 
             app.UseHttpsRedirection();
             app.UseMvc();
