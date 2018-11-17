@@ -2,38 +2,30 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:internals="http://xamarin.com/schemas/2014/forms"
-             x:Class="GreenWalk.Pages.Journeys">
+             x:Class="GreenWalk.Pages.Journeys"
+             Title="Mes récoltes"
+             Padding="10,10,10,10">
   <ListView x:Name="MyListView"
             ItemsSource="{Binding AllJourneys}"
             ItemTapped="Handle_ItemTapped"
-            CachingStrategy="RecycleElement">
+            CachingStrategy="RecycleElement"
+            RowHeight="100">
             
     <!--Built in Cells-->
     <ListView.ItemTemplate>
         <DataTemplate>
                 <ViewCell>
-                    <StackLayout Padding="5,0,5,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-                        <Label Text="{ Binding User.FirstName }" />
-                        <Label Text="{Binding User.LastName}" />
+                    <StackLayout Padding="0,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal" >
+                        <Image Source="{Binding User.Pseudo}" Aspect="AspectFill" HeightRequest="100" WidthRequest="100"/>
+                        <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+                            <Label Text="{Binding User.FullName }" FontSize="Medium"/>
+                            <Label Text="{Binding Date}" Margin="5,0,5,0" FontSize="Micro"/>
+                        </StackLayout>
                     </StackLayout>
                 </ViewCell>
         </DataTemplate>
     </ListView.ItemTemplate>
     
-    <!--Custom View Cells-->
-    <!--
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <ViewCell>
-          <StackLayout>
-            <Label Text="{Binding Text}" 
-                   Style="{DynamicResource ListItemTextStyle}" />
-            <Label Text="{Binding Detail}" 
-                   Style="{DynamicResource ListItemDetailTextStyle}"/>
-          </StackLayout>
-        </ViewCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-    -->
+    
   </ListView>
 </ContentPage>

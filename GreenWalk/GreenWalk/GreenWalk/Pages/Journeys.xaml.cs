@@ -27,22 +27,18 @@ namespace GreenWalk.Pages
                 {
                     FirstName = "Lucas",
                     LastName = "Tambarin",
-                    Pseudo = "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwj93-Ta9dreAhUDNOwKHb_QDmUQjRx6BAgBEAU&url=https%3A%2F%2Fwww.churchtrac.com%2Farticles%2Finsert-logo-here%2F&psig=AOvVaw0Z_hWefV7k5fNPDXSNyOln&ust=1542526218359916"
+                    Pseudo = "https://picsum.photos/500"
                 };
             }
 
             MyListView.ItemsSource = AllJourneys;
         }
 
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e.Item == null)
                 return;
-
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
-
-            //Deselect Item
-            ((ListView)sender).SelectedItem = null;
+            Navigation.PushAsync(new DetailJourney());
         }
     }
 }
