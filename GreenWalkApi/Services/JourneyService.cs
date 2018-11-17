@@ -33,8 +33,7 @@ namespace GreenWalkApi.Services
 
         public void Update(Journey journey)
         {
-            var _journey = _context.Journeys
-                .Single(jour => jour.JourneyID == journey.JourneyID);
+            var _journey = _context.Journeys.Find(journey.JourneyID);
             _journey = journey;
             _context.SaveChanges();
         }
