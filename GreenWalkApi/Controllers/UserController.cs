@@ -36,7 +36,7 @@ namespace GreenWalkApi.Controllers
             _userService.Update(user);
         }
 
-        [HttpPost]
+        [HttpDelete]
         public void Delete([FromBody]User user)
         {
             _userService.Delete(user);

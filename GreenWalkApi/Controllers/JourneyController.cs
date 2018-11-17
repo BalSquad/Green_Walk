@@ -24,7 +24,7 @@ namespace GreenWalkApi.Controllers
             throw new System.NotImplementedException();
         }
 
-        [HttpPost]
+        [HttpDelete]
         public void Delete([FromBody]Journey journey)
         {
             _journeyService.Delete(journey);
