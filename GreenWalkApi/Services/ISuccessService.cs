@@ -1,4 +1,4 @@
-﻿using GreenWalkApi.Models;
+﻿using GreenWalkModel;
 using System.Collections.Generic;
 
 namespace GreenWalkApi.Services

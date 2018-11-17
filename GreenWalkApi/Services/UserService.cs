@@ -1,4 +1,5 @@
 using GreenWalkApi.Models;
+using GreenWalkModel;
 using System.Collections.Generic;
 using System.Linq;
 
