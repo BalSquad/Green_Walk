@@ -36,6 +36,12 @@ namespace GreenWalkApi.Controllers
             return _journeyService.Get(id);
         }
 
+        [HttpGet("{id}")]
+        public ActionResult<List<Journey>> GetAllByUser(int id)
+        {
+            return _journeyService.GetAllByUser(id);
+        }
+
         [HttpGet]
         public ActionResult<List<Journey>> GetAll()
         {
