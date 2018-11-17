@@ -18,7 +18,8 @@ namespace GreenWalk.Services
                 List<Journey> journeys = new List<Journey>();
                 try
                 {
-                    HttpResponseMessage response = client.GetAsync($"https://greenwalkapi.azurewebsites.net/api/journey/getallbyjourney/1").Result;
+                    var request = new HttpRequestMessage(HttpMethod.Get, $"https://greenwalkapi.azurewebsites.net/api/journey/getallbyuser/2");
+                    HttpResponseMessage response = client.SendAsync(request).Result;
                     if (response.IsSuccessStatusCode)
                     {
                         string json = response.Content.ReadAsStringAsync().Result;

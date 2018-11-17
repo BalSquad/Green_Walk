@@ -10,7 +10,7 @@
     <!--Built in Cells-->
     <ListView.ItemTemplate>
         <DataTemplate>
-            <TextCell Text="{Binding JourneyID}" />
+            <TextCell Text="{Binding User.FirstName}" />
         </DataTemplate>
     </ListView.ItemTemplate>
     
