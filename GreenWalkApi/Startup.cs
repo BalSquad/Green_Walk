@@ -32,6 +32,8 @@ namespace GreenWalkApi
             services.AddScoped<IJourneyService, JourneyService>();
             services.AddScoped<IPositionService, PositionService>();
             services.AddScoped<IEventService, EventService>();
+            services.AddScoped<IBinService, BinService>();
+            services.AddScoped<ISuccessService, SuccessService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
