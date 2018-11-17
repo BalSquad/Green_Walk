@@ -1,5 +1,5 @@
 ﻿using System;
-namespace GreenWalk.Models
+namespace GreenWalkModel
 {
     public class Event
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace GreenWalkApi.Models
+namespace GreenWalkModel
 {
     public class Bin
     {

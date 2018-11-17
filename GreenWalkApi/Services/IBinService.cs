@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using GreenWalkApi.Models;
+using GreenWalkModel;
 
 namespace GreenWalkApi.Services
 {
