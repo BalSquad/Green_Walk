@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -17,7 +18,7 @@ namespace GreenWalk.Services
                 List<Journey> journeys = new List<Journey>();
                 try
                 {
-                    HttpResponseMessage response = client.GetAsync($"https://greenwalkapi.azurewebsites.net/api/journey").Result;
+                    HttpResponseMessage response = client.GetAsync($"https://greenwalkapi.azurewebsites.net/api/journey/getallbyjourney/1").Result;
                     if (response.IsSuccessStatusCode)
                     {
                         string json = response.Content.ReadAsStringAsync().Result;
@@ -26,7 +27,8 @@ namespace GreenWalk.Services
                 }
                 catch(Exception e)
                 {
-
+                    Debug.WriteLine(e.Message);
+                    Debug.WriteLine(e.InnerException.Message);
                 }
                 return journeys;
             }
