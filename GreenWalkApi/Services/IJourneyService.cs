@@ -1,11 +1,15 @@
-namespace GreenWalkApi.Services 
+using GreenWalkApi.Models;
+using System.Collections.Generic;
+
+namespace GreenWalkApi.Services
 {
-        public interface IJourneyService 
-        {
-                int Get(int id);
-                int GetAll();
-                void Update();
-                void Delete(int id);
-        }
+    public interface IJourneyService
+    {
+        Journey Get(int id);
+        List<Journey> GetAll();
+        void Update(Journey journey);
+        void Delete(Journey journey);
+        void Create(Journey journey);
+    }
 
 }
