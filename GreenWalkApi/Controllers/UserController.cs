@@ -31,19 +31,19 @@ namespace GreenWalkApi.Controllers
         }
 
         [HttpPut]
-        public void Update(User user)
+        public void Update([FromBody]User user)
         {
             _userService.Update(user);
         }
 
         [HttpPost]
-        public void Delete(User user)
+        public void Delete([FromBody]User user)
         {
             _userService.Delete(user);
         }
 
         [HttpPost]
-        public void Create(User item)
+        public void Create([FromBody]User item)
         {
             throw new System.NotImplementedException();
         }

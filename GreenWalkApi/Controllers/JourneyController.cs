@@ -19,13 +19,13 @@ namespace GreenWalkApi.Controllers
         }
 
         [HttpPost]
-        public void Create(Journey item)
+        public void Create([FromBody]Journey item)
         {
             throw new System.NotImplementedException();
         }
 
         [HttpPost]
-        public void Delete(Journey journey)
+        public void Delete([FromBody]Journey journey)
         {
             _journeyService.Delete(journey);
         }
@@ -43,7 +43,7 @@ namespace GreenWalkApi.Controllers
         }
 
         [HttpPut]
-        public void Update(Journey journey)
+        public void Update([FromBody]Journey journey)
         {
             _journeyService.Update(journey);
         }
