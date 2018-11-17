@@ -18,7 +18,7 @@ namespace GreenWalkApi.Services
 
         public void Create(Success success)
         {
-            _context.Successes.Add(success)
+            _context.Successes.Add(success);
         }
 
         public void Delete(Success success)

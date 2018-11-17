@@ -17,6 +17,6 @@ namespace GreenWalkApi.Models
         public ICollection<Journey> Journeys { get; set; }
         public ICollection<Bin> Bins { get; set; }
         public ICollection<Event> Events { get; set; }
-        public ICollection<Success> Success { get; set; }
+        public ICollection<Success> Successes { get; set; }
     }
 }
