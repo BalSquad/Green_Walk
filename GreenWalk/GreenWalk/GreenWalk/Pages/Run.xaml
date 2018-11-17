@@ -5,30 +5,26 @@
              x:Class="GreenWalk.Pages.Run">
     <ContentPage.BackgroundColor>White</ContentPage.BackgroundColor>
     <ContentPage.Content>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="3*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-            <Label Grid.Row="0" TextColor="Black" Text="{Binding Time, StringFormat='{0:mm\\:ss\\:ff}'}" x:Name="TimerDisplay"
+        <StackLayout Orientation="Vertical">
+            <Label TextColor="Black" 
+                   Text="{Binding Time, StringFormat='{0:mm\\:ss\\:ff}'}" 
+                   x:Name="TimerDisplay"
                    HorizontalTextAlignment="Center"
-                   VerticalOptions="Center"
-                   FontSize="Medium">
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="42">
             </Label>
-            <maps:Map MapType="Street" Grid.Row="1"/>
+            <maps:Map MapType="Street" 
+                      VerticalOptions="FillAndExpand"
+                      HorizontalOptions="FillAndExpand"/>
             <Button x:Name="Stop" 
                     Text="Fini !" 
                     Clicked="Stop_Clicked" 
                     BackgroundColor="MediumSeaGreen" 
-                    Grid.Row="2"
                     FontSize="Large" 
                     TextColor="White" 
                     FontAttributes="Bold" 
-                    FontFamily="Open Sans"/>
-        </Grid>
+                    FontFamily="Open Sans"
+                    VerticalOptions="EndAndExpand"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
