@@ -2,37 +2,47 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GreenWalkApi.Models;
 
 namespace GreenWalkApi.Services
 {
     public class PositionService : IPositionService
     {
 
-        private IContextService _contextService;
+        private GreenWalkContext _context;
 
-        public PositionService(IContextService contextService)
+        public PositionService(GreenWalkContext context)
         {
-            _contextService = contextService;
+            _context = context;
         }
 
-        public void Delete(int id)
+        public void Delete(Position position)
         {
-            throw new NotImplementedException();
+            _context.Remove(position);
+            _context.SaveChanges();
         }
 
-        public int Get(int id)
+        public Position Get(int id)
         {
-            throw new NotImplementedException();
+            return _context.Positions.Single(p => p.PositionID == id);
         }
 
-        public int GetAll()
+        public List<Position> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Positions.ToList();
         }
 
-        public void Update()
+        public void Update(Position position)
         {
-            throw new NotImplementedException();
+            var _position = _context.Positions.Find(position.PositionID);
+            _position = position;
+            _context.SaveChanges();
+        }
+
+        public void Create(Position position)
+        {
+            _context.Add(position);
+            _context.SaveChanges();
         }
     }
 }

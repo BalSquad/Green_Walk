@@ -2,37 +2,47 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GreenWalkApi.Models;
 
 namespace GreenWalkApi.Services
 {
     public class EventService : IEventService
     {
 
-        private IContextService _contextService;
+        private GreenWalkContext _context;
 
-        public EventService(IContextService contextService)
+        public EventService(GreenWalkContext context)
         {
-            _contextService = contextService;
+            _context = context;
+        }
+        
+        public void Delete(Event eventt)
+        {
+            _context.Remove(eventt);
+            _context.SaveChanges();
         }
 
-        public void Delete(int id)
+        public Event Get(int id)
         {
-            throw new NotImplementedException();
+            return _context.Events.Single(e => e.EventID == id);
         }
 
-        public int Get(int id)
+        public List<Event> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Events.ToList();
         }
 
-        public int GetAll()
+        public void Update(Event eventt)
         {
-            throw new NotImplementedException();
+            var _event = _context.Events.Find(eventt.EventID);
+            _event = eventt;
+            _context.SaveChanges();
         }
 
-        public void Update()
+        public void Create(Event eventt)
         {
-            throw new NotImplementedException();
+            _context.Add(eventt);
+            _context.SaveChanges();
         }
     }
 }
