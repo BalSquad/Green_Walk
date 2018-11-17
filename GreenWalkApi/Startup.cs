@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using GreenWalkApi.Models;
 using GreenWalkApi.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace GreenWalkApi
 {
@@ -27,6 +22,9 @@ namespace GreenWalkApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<GreenWalkContext>(options => 
+                options.UseSqlServer("Server=tcp:greenwalkapidbserver.database.windows.net,1433;Initial Catalog=GreenWalk_DB;Persist Security Info=False;User ID=GreenWalk_Admin;Password=ImGonnaCl€an4;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
 
             services.AddScoped<IContextService, ContextService>();
             services.AddScoped<IUserService, UserService>();

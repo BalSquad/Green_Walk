@@ -1,11 +1,11 @@
-namespace GreenWalkApi.Services 
+using GreenWalkApi.Models;
+
+namespace GreenWalkApi.Services
 {
 
-    public interface IContextService 
+    public interface IContextService
     {
-
-        
-
+        GreenWalkContext Context { get; }
     }
 
 }
