@@ -35,4 +35,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\GreenWalkModel\GreenWalkModel.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Pages\EndJourney.cs" />
+    <Compile Remove="Pages\EndJourney.cs" />
+  </ItemGroup>
 </Project>
